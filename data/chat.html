@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+      <script src="chat.js"></script>
+      <link rel="stylesheet" href="chat.css">
+   </head>
+   <body>
+      <div class="title">
+         <h1>ESP32 CHATGPT</h1>
+         <p>You can ask ChatGPT for temperature, pressure, humidity and altitude.</p>
+      </div>
+      <div class = "main-container">
+         <div class = "u-display--flex connect-row">
+            <input type = "text" id = "nameText" placeholder="Enter your name and press CONNECT"  class = "text-input u-flex-grow--1"></input>
+            <button onclick = "OpenWebsocket()" id = "connectButton" class="btn">CONNECT</button>
+            <button onclick = "CloseWebsocket()" disabled id = "disconnectButton" class="btn">DISCONNECT</button>
+         </div>
+         <div class="chat-container">
+            <div id = "chatDiv" class="chat mobile-padding">
+            </div>
+         </div>
+         <div class = "u-display--flex">
+            <input type = "text" disabled id = "inputText" placeholder="Enter a message" class="text-input u-flex-grow--1"></input>
+            <button onclick = "SendData()"  disabled id = "sendButton" class="btn">SEND</button>
+         </div>
+      </div>
+   </body>
+</html>
